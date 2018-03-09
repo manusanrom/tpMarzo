@@ -25,5 +25,5 @@ item.
 
 Uso 
 -----------------------
-Para usarlo simplemente copiar esta carpeta al document root, en nuestro
+Para usarlo simplemente copiar la carpeta rss-php al document root, en nuestro
 caso /var/www/html y probarlo en el navegador.
