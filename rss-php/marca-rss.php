@@ -16,8 +16,9 @@ $rss = Feed::loadRss('http://estaticos.marca.com/rss/portada.xml');
 <p><i><?php echo htmlSpecialChars($rss->description) ?></i></p>
 
 <?php foreach ($rss->item as $item): ?>
-	<h2><a href="<?php echo htmlSpecialChars($item->link) ?>"><?php echo htmlSpecialChars($item->title) ?></a>
-	<small><?php echo date("j.n.Y H:i", (int) $item->timestamp) ?></small></h2>
-	<p><?php echo htmlSpecialChars($item->category) ?></p>
+        <h2><a href="<?= htmlSpecialChars($item->link) ?>"><?= htmlSpecialChars($item->title) ?></a>
+        <p><small><?= htmlSpecialChars($item->{'media:description'}) ?></small></p>
+        <small><?= date("j.n.Y H:i", (int) $item->timestamp) ?></small></h2>
+        <p><?= htmlSpecialChars($item->category) ?></p>
 <?php endforeach ?>
 
